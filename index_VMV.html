@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trunk Based Development - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Trunk Based Development Demo</h1>
+            <p>Demonstração prática de TBD com Feature Flags</p>
+        </header>
+
+        <main>
+            <section class="feature-flags">
+                <h2>🎛️ Feature Flags</h2>
+                <div class="flag-controls">
+                    <label class="flag-item">
+                        <input type="checkbox" id="darkMode" onchange="toggleFeature('darkMode')">
+                        <span>Modo Escuro</span>
+                    </label>
+                    <label class="flag-item">
+                        <input type="checkbox" id="newHeader" onchange="toggleFeature('newHeader')">
+                        <span>Novo Cabeçalho</span>
+                    </label>
+                    <label class="flag-item">
+                        <input type="checkbox" id="analytics" onchange="toggleFeature('analytics')">
+                        <span>Analytics</span>
+                    </label>
+                    <label class="flag-item">
+                        <input type="checkbox" id="premiumFeatures" onchange="toggleFeature('premiumFeatures')">
+                        <span>Recursos Premium</span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="content">
+                <div id="header-section">
+                    <h2 id="main-title">Bem-vindo ao Demo TBD</h2>
+                    <p>Este projeto demonstra como usar Trunk Based Development com Feature Flags.</p>
+                </div>
+
+                <div class="features">
+                    <div class="feature-card" id="basic-features">
+                        <h3>Recursos Básicos</h3>
+                        <p>Estes recursos estão sempre disponíveis.</p>
+                        <button onclick="showMessage('Recurso básico ativado!')">Ativar Recurso</button>
+                    </div>
+
+                    <div class="feature-card premium-only" id="premium-card" style="display: none;">
+                        <h3>Recursos Premium</h3>
+                        <p>Estes recursos só aparecem quando a feature flag está ativa.</p>
+                        <button onclick="showMessage('Recurso premium ativado!')">Ativar Premium</button>
+                    </div>
+                </div>
+
+                <div class="analytics-section" id="analytics-section" style="display: none;">
+                    <h3>📊 Analytics</h3>
+                    <p>Esta seção só aparece quando analytics está habilitado.</p>
+                    <div class="analytics-data">
+                        <div class="metric">
+                            <span class="metric-label">Usuários Ativos:</span>
+                            <span class="metric-value">1,234</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Páginas Visitadas:</span>
+                            <span class="metric-value">5,678</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="git-info">
+                <h2>📚 Sobre Trunk Based Development</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <h3>O que é TBD?</h3>
+                        <p>Trunk Based Development é uma metodologia onde todos os desenvolvedores trabalham em uma única branch principal (trunk), fazendo commits pequenos e frequentes.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Feature Flags</h3>
+                        <p>Permitem ativar/desativar funcionalidades em produção sem fazer deploy de novo código, facilitando o TBD.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Benefícios</h3>
+                        <p>Reduz conflitos de merge, acelera o desenvolvimento e permite releases mais frequentes e seguras.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Demo criado para aula de Introdução ao Git - Trunk Based Development</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
